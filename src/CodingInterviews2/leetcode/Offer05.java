@@ -12,7 +12,7 @@ package CodingInterviews2.leetcode;
  * 0 <= s 的长度 <= 10000
  */
 public class Offer05 {
-/*暴力
+/*TODO:暴力
 执行用时：0 ms, 在所有 Java 提交中击败了100.00%的用户
 内存消耗：39.7 MB, 在所有 Java 提交中击败了10.51%的用户
  */
@@ -31,7 +31,7 @@ public class Offer05 {
         return new String(ans,0,i);
     }
 /*
-库函数
+TODO:库函数
 执行用时：2 ms, 在所有 Java 提交中击败了10.05%的用户
 内存消耗：39.6 MB, 在所有 Java 提交中击败了26.03%的用户
  */

@@ -27,7 +27,7 @@ import java.util.Set;
  */
 public class Offer03 {
 
-/*HashSet
+/*TODO:HashSet
 执行用时：4 ms, 在所有 Java 提交中击败了58.62%的用户
 内存消耗：51.1 MB, 在所有 Java 提交中击败了12.24%的用户
  */
@@ -42,7 +42,7 @@ public class Offer03 {
         }
         return repeat;
     }
-/*设置标记
+/*TODO:设置标记
 执行用时：1 ms, 在所有 Java 提交中击败了79.91%的用户
 内存消耗：48.2 MB, 在所有 Java 提交中击败了99.74%的用户
  */
