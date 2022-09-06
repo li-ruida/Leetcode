@@ -1,4 +1,4 @@
-package CodingInterviews2.leetcode;
+package leetcode.CodingInterviews2.algorithm;
 
 /**
  * @author lrd

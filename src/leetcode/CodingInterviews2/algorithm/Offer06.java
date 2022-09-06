@@ -1,8 +1,7 @@
-package CodingInterviews2.leetcode;
+package leetcode.CodingInterviews2.algorithm;
 
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.Stack;
 
 /**

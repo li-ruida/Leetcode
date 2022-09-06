@@ -1,4 +1,4 @@
-package CodingInterviews2.leetcode;
+package leetcode.CodingInterviews2.algorithm;
 
 import java.util.Deque;
 import java.util.HashMap;
