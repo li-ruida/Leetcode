@@ -19,9 +19,11 @@ package leetcode.CodingInterviews2.algorithm;
  * 0 <= n <= 100
  */
 
-public class Offer10 {
+public class Offer10_1 {
 /*
 todo:矩阵快速幂
+执行用时：0 ms, 在所有 Java 提交中击败了100.00%的用户
+内存消耗：38.3 MB, 在所有 Java 提交中击败了42.89%的用户
 时间复杂度：O(logn)。
 空间复杂度：O(1)。
 
@@ -35,11 +37,11 @@ todo:矩阵快速幂
             return n;
         }
         int[][] q = {{1, 1}, {1, 0}};
-        int[][] res = pow(q, n - 1);
+        int[][] res = pow(q, n - 1);//乘n-1次
         return res[0][0];
     }
     public int[][] pow(int[][] a, int n) {
-        int[][] ret = {{1, 0}, {0, 1}};
+        int[][] ret = {{1, 0}, {0, 1}};//结果矩阵初始化为对角矩阵
         while (n > 0) {
             if ((n & 1) == 1) {
                 ret = multiply(ret, a);
