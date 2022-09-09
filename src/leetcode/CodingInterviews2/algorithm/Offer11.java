@@ -25,7 +25,7 @@ import java.util.Arrays;
  */
 public class Offer11 {
 /*
-todo:二分查找
+二分查找
 O(logn)
 执行用时：0 ms, 在所有 Java 提交中击败了100.00%的用户
 内存消耗：41.4 MB, 在所有 Java 提交中击败了31.65%的用户
@@ -48,7 +48,7 @@ O(logn)
         return numbers[m];
     }
 /*
-todo:快排之后返回第一个
+快排之后返回第一个
 O(nlogn)
  */
 

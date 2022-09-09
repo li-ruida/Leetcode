@@ -17,7 +17,7 @@ import java.util.Stack;
  */
 
 public class Offer06 {
-/*TODO:递归实现
+/*递归实现
 执行用时：0 ms, 在所有 Java 提交中击败了100.00%的用户
 内存消耗：42 MB, 在所有 Java 提交中击败了49.96%的用户
  */
@@ -43,7 +43,7 @@ class ListNode {
     }
 
 /*
-TODO:栈实现
+栈实现
  */
 public int[] reversePrint1(ListNode head) {
     Stack<ListNode> stack = new Stack<ListNode>();

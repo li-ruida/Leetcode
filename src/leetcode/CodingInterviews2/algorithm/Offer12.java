@@ -26,7 +26,7 @@ import java.util.Deque;
 */
 public class Offer12 {
 /*
-todo:回溯
+回溯
 执行用时：169 ms, 在所有 Java 提交中击败了6.75%的用户
 内存消耗：41.6 MB, 在所有 Java 提交中击败了51.49%的用户
  */
@@ -69,7 +69,7 @@ todo:回溯
         return result;
     }
 /*
-todo:dfs
+dfs
 执行用时：66 ms, 在所有 Java 提交中击败了51.62%的用户
 内存消耗：39.4 MB, 在所有 Java 提交中击败了84.86%的用户
  */

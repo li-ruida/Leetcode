@@ -21,7 +21,7 @@ package leetcode.CodingInterviews2.algorithm;
 
 public class Offer10_1 {
 /*
-todo:矩阵快速幂
+矩阵快速幂
 执行用时：0 ms, 在所有 Java 提交中击败了100.00%的用户
 内存消耗：38.3 MB, 在所有 Java 提交中击败了42.89%的用户
 时间复杂度：O(logn)。
@@ -60,7 +60,7 @@ todo:矩阵快速幂
         }
         return c;
     }
-/*todo:动态规划
+/*动态规划
 时间复杂度：O(n)。
 空间复杂度：O(1)。
  */
@@ -77,7 +77,7 @@ public int fib2(int n) {
     return fn1;
 }
 
-/*todo:递归超时
+/*递归超时
  */
     public int fib1(int n) {
         if(n<2){

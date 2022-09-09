@@ -22,7 +22,7 @@ import org.junit.Test;
  * 注意：本题与主站 70 题相同：https://leetcode-cn.com/problems/climbing-stairs/
  */
 public class Offer10_2 {
-/*todo:动态规划
+/*动态规划
 执行用时：0 ms, 在所有 Java 提交中击败了100.00%的用户
 内存消耗：38.4 MB, 在所有 Java 提交中击败了29.33%的用户
  */
@@ -43,7 +43,7 @@ public class Offer10_2 {
     public void test(){
         System.out.println(numWays(2));
     }
-/*todo:快速幂
+/*快速幂
 执行用时：0 ms, 在所有 Java 提交中击败了100.00%的用户
 内存消耗：38.4 MB, 在所有 Java 提交中击败了32.37%的用户
  */
