@@ -5,7 +5,7 @@
 
 ```java
 public @interface Leetcode {
-    String value() default "暴力";//多个可以指定为数组
+    String value() default "暴力";
 }
 ```
 
