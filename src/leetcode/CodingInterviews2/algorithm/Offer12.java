@@ -30,6 +30,7 @@ public class Offer12 {
 执行用时：169 ms, 在所有 Java 提交中击败了6.75%的用户
 内存消耗：41.6 MB, 在所有 Java 提交中击败了51.49%的用户
  */
+@Leetcode("回溯")
     public boolean exist(char[][] board, String word) {
         int m=board.length,n=board[0].length;
         boolean  [][] visited=new boolean[m][n];
@@ -73,6 +74,7 @@ dfs
 执行用时：66 ms, 在所有 Java 提交中击败了51.62%的用户
 内存消耗：39.4 MB, 在所有 Java 提交中击败了84.86%的用户
  */
+@Leetcode("dfs")
     public boolean exist1(char[][] board, String word) {
         char[] words = word.toCharArray();
         for(int i = 0; i < board.length; i++) {

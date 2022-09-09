@@ -21,7 +21,7 @@ import org.junit.Test;
  * 2 <= n <= 58
  * 注意：本题与主站 343 题相同：https://leetcode-cn.com/problems/integer-break/
  */
-public class Offer14 {
+public class Offer14_1 {
 /*数学
 执行用时：0 ms, 在所有 Java 提交中击败了100.00%的用户
 内存消耗：38.3 MB, 在所有 Java 提交中击败了54.11%的用户
@@ -31,6 +31,7 @@ public class Offer14 {
 4拆为2*2
 5以上优先拆出3
  */
+@Leetcode("数学")
     public int cuttingRope1(int n) {
         if(n<=3)
             return n-1;
@@ -51,6 +52,7 @@ public class Offer14 {
 执行用时：1 ms, 在所有 Java 提交中击败了45.82%的用户
 内存消耗：38.4 MB, 在所有 Java 提交中击败了38.83%的用户
  */
+@Leetcode("动态规划")
     public int cuttingRope(int n) {
         int []dp=new int[n+5];
         for (int i = 2; i <= n; i++) {//从2开始到n切割
@@ -82,5 +84,6 @@ dp优化
         System.out.println(cuttingRope(2));
         System.out.println(cuttingRope(3));
         System.out.println(cuttingRope(10));
+        System.out.println(cuttingRope1(120));
     }
 }

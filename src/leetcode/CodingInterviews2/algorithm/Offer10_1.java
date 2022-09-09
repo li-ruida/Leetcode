@@ -31,6 +31,7 @@ public class Offer10_1 {
           *           =
 1     0       f(n-2)      f(n-1)
  */
+@Leetcode("矩阵快速幂")
     static final int MOD = 1000000007;
     public int fib(int n) {
         if (n < 2) {
@@ -64,6 +65,7 @@ public class Offer10_1 {
 时间复杂度：O(n)。
 空间复杂度：O(1)。
  */
+@Leetcode("动态规划")
 public int fib2(int n) {
     if(n == 0) return 0;
     int fn0 = 0;
@@ -79,6 +81,7 @@ public int fib2(int n) {
 
 /*递归超时
  */
+@Leetcode("递归超时")
     public int fib1(int n) {
         if(n<2){
             return n;

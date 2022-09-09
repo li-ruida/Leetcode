@@ -26,6 +26,7 @@ public class Offer10_2 {
 执行用时：0 ms, 在所有 Java 提交中击败了100.00%的用户
 内存消耗：38.4 MB, 在所有 Java 提交中击败了29.33%的用户
  */
+@Leetcode("动态规划")
     static final int MOD = 1000000007;
     public int numWays(int n) {
         int ans=0;
@@ -47,6 +48,7 @@ public class Offer10_2 {
 执行用时：0 ms, 在所有 Java 提交中击败了100.00%的用户
 内存消耗：38.4 MB, 在所有 Java 提交中击败了32.37%的用户
  */
+@Leetcode("快速幂")
 static final int MOD1 = 1000000007;
     public int numWays1(int n) {
         if (n < 2) {

@@ -37,6 +37,7 @@ public class Offer08 {
 执行用时：1818 ms, 在所有 Java 提交中击败了5.11%的用户
 内存消耗：48.1 MB, 在所有 Java 提交中击败了73.16%的用户
  */
+@Leetcode("栈2存栈1")
     class CQueue {
         //Stack<Integer> stack1,stack2;
         Stack<Integer> stack1,stack2;

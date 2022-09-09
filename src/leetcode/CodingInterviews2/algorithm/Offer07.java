@@ -33,6 +33,7 @@ public class Offer07 {
 执行用时：1 ms, 在所有 Java 提交中击败了99.83%的用户
 内存消耗：41.1 MB, 在所有 Java 提交中击败了54.15%的用户
  */
+@Leetcode("递归")
   HashMap<Integer,Integer> map=new HashMap<>();//存储中序遍历的值和索引
     public TreeNode buildTree(int[] preorder, int[] inorder) {
       int n=inorder.length;
@@ -68,6 +69,7 @@ u 没有左儿子，并且 v 是 u 的某个祖先节点（或者 u 本身）的
 来源：力扣（LeetCode）
 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
  */
+@Leetcode("迭代")
 public TreeNode buildTree1(int[] preorder, int[] inorder) {
   if (preorder == null || preorder.length == 0) {
     return null;

@@ -16,6 +16,7 @@ public class Offer05 {
 执行用时：0 ms, 在所有 Java 提交中击败了100.00%的用户
 内存消耗：39.7 MB, 在所有 Java 提交中击败了10.51%的用户
  */
+@Leetcode("暴力")
     public String replaceSpace(String s) {
         char []temp=s.toCharArray();
         char []ans=new char[s.length()*3];
@@ -31,10 +32,11 @@ public class Offer05 {
         return new String(ans,0,i);
     }
 /*
-库函数
+
 执行用时：2 ms, 在所有 Java 提交中击败了10.05%的用户
 内存消耗：39.6 MB, 在所有 Java 提交中击败了26.03%的用户
  */
+@Leetcode("库函数")
     public String replaceSpace1(String s) {
         return s.replaceAll(" ","%20");
     }

@@ -30,6 +30,7 @@ O(logn)
 执行用时：0 ms, 在所有 Java 提交中击败了100.00%的用户
 内存消耗：41.4 MB, 在所有 Java 提交中击败了31.65%的用户
  */
+@Leetcode("二分查找")
     public int minArray(int[] numbers) {
         int l=0,m=0;
         int r=numbers.length-1;
