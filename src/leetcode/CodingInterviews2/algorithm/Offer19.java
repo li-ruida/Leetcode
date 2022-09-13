@@ -58,9 +58,9 @@ public class Offer19 {
         for (int i = 0; i <= m; ++i) {
             for (int j = 1; j <= n; ++j) {
                 if (p.charAt(j - 1) == '*') {
-                    f[i][j] = f[i][j - 2];
+                    f[i][j] = f[i][j - 2];//匹配0次
                     if (matches(s, p, i, j - 1)) {
-                        f[i][j] = f[i][j] || f[i - 1][j];
+                        f[i][j] = f[i][j] || f[i - 1][j];//匹配1次或多次
                     }
                 } else {
                     if (matches(s, p, i, j)) {
