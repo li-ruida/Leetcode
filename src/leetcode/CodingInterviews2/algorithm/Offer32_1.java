@@ -19,7 +19,7 @@ import java.util.*;
  * 提示：
  * 节点总数 <= 1000
  */
-public class Offer32 {
+public class Offer32_1 {
     public class TreeNode {
         int val;
         TreeNode left;
