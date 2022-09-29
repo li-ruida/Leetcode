@@ -15,7 +15,7 @@ package leetcode.CodingInterviews2.algorithm;
  * 限制：
  * 1 <= 数组长度 <= 10000
  */
-public class Offer53 {
+public class Offer53_2 {
 /*
 位运算
 执行用时：0 ms, 在所有 Java 提交中击败了100.00%的用户
