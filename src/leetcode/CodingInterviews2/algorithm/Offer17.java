@@ -28,40 +28,33 @@ public class Offer17 {
         return res;
     }
 /*DFS 考虑大数
-执行用时：7 ms, 在所有 Java 提交中击败了13.80%的用户
-内存消耗：49.2 MB, 在所有 Java 提交中击败了41.12%的用户
  */
 @Leetcode("DFS 考虑大数")
-    int[] res;
-    int nine = 0, count = 0, start, m;
-    char[] num, loop = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
+    char[] num;
+    int[] ans;
+    int count = 0,m;
     public int[] printNumbers(int n) {
         m = n;
-        res = new int[(int)Math.pow(10, n) - 1];
         num = new char[n];
-        start = n - 1;
+        ans = new int[(int) (Math.pow(10, n) - 1)];
         dfs(0);
-        return res;
+        return ans;
     }
-    void dfs(int x) {
-        if(x == m) {
-            String s = String.valueOf(num).substring(start);//截去多余的0
-            if(!s.equals("0"))
-                res[count++] = Integer.parseInt(s);
-            if(m - start == nine)
-                start--;
+    void dfs(int n) {
+        if (n == m) {
+            String tmp = String.valueOf(num);
+            int curNum = Integer.parseInt(tmp);
+            if (curNum!=0)
+                ans[count++] = curNum;
             return;
         }
-        for(char i : loop) {
-            if(i == '9')
-                nine++;//轮数,第一次一轮9
-            num[x] = i;
-            dfs(x + 1);
+        for (char i = '0'; i <= '9'; i++) {
+            num[n] = i;
+            dfs(n + 1);
         }
-        nine--;
     }
     @Test
     public void test(){
-        System.out.println(printNumbers(8));
+        System.out.println(printNumbers(3));
     }
 }

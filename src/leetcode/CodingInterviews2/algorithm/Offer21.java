@@ -43,8 +43,10 @@ public class Offer21 {
     public int[] exchange(int[] nums) {
     int i = 0, j = nums.length - 1, tmp;
     while(i < j) {
-        while(i < j && (nums[i] & 1) == 1) i++;//找到第一个偶数
-        while(i < j && (nums[j] & 1) == 0) j--;//找到最后一个奇数
+        while(i < j && (nums[i] & 1) == 1)
+            i++;//找到第一个偶数
+        while(i < j && (nums[j] & 1) == 0)
+            j--;//找到最后一个奇数
         tmp = nums[i];
         nums[i] = nums[j];
         nums[j] = tmp;

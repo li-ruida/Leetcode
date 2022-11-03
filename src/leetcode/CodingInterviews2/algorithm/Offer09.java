@@ -31,7 +31,7 @@ import java.util.Stack;
  *
  */
 
-public class Offer08 {
+public class Offer09 {
 /*
 栈2存栈1
 执行用时：1818 ms, 在所有 Java 提交中击败了5.11%的用户
@@ -51,20 +51,14 @@ public class Offer08 {
         }
 
         public int deleteHead() {
-            int ans=-1;
-            while (!stack1.empty()){
-                stack2.push(stack1.peek());
-                ans=stack1.peek();
-                stack1.pop();
+            if(!stack2.isEmpty()){
+                return stack2.pop();
+            }else{
+                while(!stack1.isEmpty()){
+                    stack2.push(stack1.pop());
+                }
+                return stack2.isEmpty() ? -1 : stack2.pop();
             }
-            if(!stack2.empty())
-                stack2.pop();
-            while (!stack2.empty()){
-                stack1.push(stack2.peek());
-                stack2.pop();
-            }
-
-            return ans;
         }
     }
 /*

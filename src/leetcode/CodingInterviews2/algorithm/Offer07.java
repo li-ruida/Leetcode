@@ -38,7 +38,7 @@ public class Offer07 {
     public TreeNode buildTree(int[] preorder, int[] inorder) {
       int n=inorder.length;
       for (int i =0;i<n;i++) {
-        map.put(inorder[i],i);
+        map.put(inorder[i],i);// 构造哈希映射，帮助我们快速定位根节点
       }
       return myTree(preorder,inorder,0,n-1,0,n-1);
     }
@@ -48,7 +48,7 @@ public class Offer07 {
     if(preorder_left>preorder_right)
       return null;
     int preorderroot=preorder_left;//根节点前序索引
-    int inorderroot=map.get(preorder[preorderroot]);//根节点后序索引
+    int inorderroot=map.get(preorder[preorderroot]);//根节点中序索引
     TreeNode root=new TreeNode(preorder[preorderroot]);
     int temp=inorderroot-inorder_left;//左子树节点数
     root.left=myTree(preorder,inorder,preorder_left+1,preorder_left+temp,inorder_left,inorderroot-1);
