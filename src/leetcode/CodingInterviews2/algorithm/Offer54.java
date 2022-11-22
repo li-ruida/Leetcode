@@ -43,7 +43,7 @@ public class Offer54 {
         dfs(root);
         return ans;
     }
-    @Leetcode("逆序中序遍历")
+@Leetcode("逆序中序遍历")
     void dfs(TreeNode root){
         if (root==null)
             return;
