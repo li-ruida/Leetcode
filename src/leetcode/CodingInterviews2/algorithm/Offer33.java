@@ -25,6 +25,7 @@ public class Offer33 {
     public boolean verifyPostorder(int[] postorder) {
         return recur(postorder, 0, postorder.length - 1);
     }
+    //当末尾为父节点时候递归
     boolean recur(int[] postorder, int i, int j) {
         if(i >= j)
             return true;
@@ -33,7 +34,7 @@ public class Offer33 {
             p++;
         int m = p;//右儿子索引
         while(postorder[p] > postorder[j])
-            p++;//父亲索引
+            p++;//右儿子最后的节点的下一个节点
         return p == j && recur(postorder, i, m - 1) && recur(postorder, m, j - 1);
     }
 
