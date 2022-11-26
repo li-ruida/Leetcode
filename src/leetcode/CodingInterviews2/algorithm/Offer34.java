@@ -41,7 +41,7 @@ public class Offer34 {
         }
     }
 @Leetcode("dfs")
-
+//注意负数
     LinkedList<List<Integer>> res = new LinkedList<>();
     LinkedList<Integer> path = new LinkedList<>();
 
@@ -58,6 +58,6 @@ public class Offer34 {
             res.add(new LinkedList(path));
         recur(root.left, tar);
         recur(root.right, tar);
-        path.removeLast();
+        path.removeLast();//向上回溯前，需要将当前节点从路径 path 中删除，即执行 path.pop()
     }
 }
