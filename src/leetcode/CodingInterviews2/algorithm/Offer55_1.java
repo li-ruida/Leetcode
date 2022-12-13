@@ -17,7 +17,7 @@ import java.util.Queue;
  *    15   7
  * 返回它的最大深度 3 。
  */
-public class Offer55 {
+public class Offer55_1 {
       public class TreeNode {
       int val;
       TreeNode left;
