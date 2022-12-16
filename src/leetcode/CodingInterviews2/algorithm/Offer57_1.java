@@ -15,7 +15,7 @@ package leetcode.CodingInterviews2.algorithm;
  * 1 <= nums.length <= 10^5
  * 1 <= nums[i] <= 10^6
  */
-public class Offer57 {
+public class Offer57_1 {
 @Leetcode("双指针")
     public int[] twoSum(int[] nums, int target) {
         int i = 0, j = nums.length - 1;
@@ -28,7 +28,7 @@ public class Offer57 {
             else
                 return new int[] { nums[i], nums[j] };
         }
-        return new int[0];
+        return null;
     }
 
 }
