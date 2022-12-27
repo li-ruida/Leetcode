@@ -31,7 +31,7 @@ public class Offer36 {
         }
     }
     Node pre,head;
-    @Leetcode("DFS")
+@Leetcode("DFS")
     public Node treeToDoublyList(Node root) {
         if(root==null)
             return null;
