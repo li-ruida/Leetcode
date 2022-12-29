@@ -1,8 +1,7 @@
 package leetcode.CodingInterviews2.algorithm;
 
+import leetcode.Leetcode;
 import org.junit.Test;
-
-import static java.lang.Math.pow;
 
 /**
  * @author lrd

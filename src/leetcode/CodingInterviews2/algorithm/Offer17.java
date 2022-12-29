@@ -1,5 +1,6 @@
 package leetcode.CodingInterviews2.algorithm;
 
+import leetcode.Leetcode;
 import org.junit.Test;
 
 /**

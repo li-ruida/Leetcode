@@ -1,6 +1,6 @@
 package leetcode.CodingInterviews2.algorithm;
 
-import org.junit.Test;
+import leetcode.Leetcode;
 
 /**
  * @author lrd
