@@ -1,5 +1,7 @@
 package leetcode.SelectTopInterviewQuestions;
 
+import leetcode.Leetcode;
+
 import java.util.HashMap;
 
 /**
@@ -26,6 +28,7 @@ import java.util.HashMap;
  * s 由英文字母、数字、符号和空格组成
  */
 public class Q3 {
+    @Leetcode("动态规划")
     public int lengthOfLongestSubstring(String s) {
         char []c=s.toCharArray();
         int len=c.length;
