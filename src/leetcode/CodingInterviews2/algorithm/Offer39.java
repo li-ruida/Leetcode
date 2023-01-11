@@ -17,7 +17,7 @@ import java.util.Map;
  * 输出: 2
  */
 public class Offer39 {
-@Leetcode("hashmap")
+@Leetcode("HashMap")
     private Map<Integer, Integer> countNums(int[] nums) {
         Map<Integer, Integer> counts = new HashMap<Integer, Integer>();
         for (int num : nums) {
@@ -40,14 +40,14 @@ public class Offer39 {
         }
         return majorityEntry.getKey();
     }
-@Leetcode("sort")
+@Leetcode("排序")
     public int majorityElement1(int[] nums) {
         Arrays.sort(nums);
         return nums[nums.length / 2];
     }
     // 1 2 2 2 4 7
 @Leetcode("Boyer-Moore 投票算法")
-    //如果我们把众数记为 +1+1+1，把其他数记为 −1-1−1，将它们全部加起来，显然和大于 0，从结果本身我们可以看出众数比其他数多。
+    //如果我们把众数记为 +1+1+1，把其他数记为 −1-1−1
     public int majorityElement2(int[] nums) {
         int count = 0;
         Integer candidate = null;
