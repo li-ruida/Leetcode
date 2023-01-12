@@ -29,13 +29,15 @@ public class Q448 {
     public List<Integer> findDisappearedNumbers(int[] nums) {
         int n = nums.length;
         for (int num : nums) {
-            int x = (num - 1) % n;
-            nums[x] += n;
+            int x = (num - 1) % n; //得到num值对应的下标
+            nums[x] += n;   //num-1下标位置的数+n放入nums数组中
         }
         List<Integer> ret = new ArrayList<Integer>();
         for (int i = 0; i < n; i++) {
             if (nums[i] <= n) {
-                ret.add(i + 1);
+                //因为值是[1,n]而第一个for循环经过if判断后筛选得到
+                //的是有问题的下标即从0开始但值从1，所以下面用i+1
+                ret.add(i + 1);//i位置上的值i+1未曾出现过
             }
         }
         return ret;
