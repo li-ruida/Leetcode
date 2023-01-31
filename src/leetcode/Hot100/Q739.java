@@ -25,7 +25,7 @@ import java.util.Deque;
  * 30 <= temperatures[i] <= 100
  */
 public class Q739 {
-    @Leetcode("单调栈")
+    @Leetcode("单调栈")//栈底>栈顶
     public int[] dailyTemperatures(int[] temperatures) {
         int length = temperatures.length;
         int[] ans = new int[length];
