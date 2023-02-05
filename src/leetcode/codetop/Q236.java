@@ -1,5 +1,7 @@
 package leetcode.codetop;
 
+import leetcode.Leetcode;
+
 /**
  * @author lrd
  * @date 2023-02-04 8:28
@@ -35,7 +37,7 @@ public class Q236 {
             val = x;
         }
     }
-
+    @Leetcode("DFS")
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         if(root==null||root==p||root==q)
             return root;
