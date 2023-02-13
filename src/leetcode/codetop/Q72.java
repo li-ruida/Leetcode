@@ -32,6 +32,7 @@ import leetcode.Leetcode;
  * word1 和 word2 由小写英文字母组成
  *
  * D[i][j] 表示 A 的前 i 个字母和 B 的前 j 个字母之间的编辑距离。
+ * https://leetcode.cn/problems/edit-distance/solutions/188223/bian-ji-ju-chi-by-leetcode-solution/
  */
 public class Q72 {
     @Leetcode("动态规划")
