@@ -29,7 +29,7 @@ public class Q5 {
         int end = 0;
         int len = 1;
         boolean[][] dp = new boolean[strlen][strlen];
-        for (int r = 0; r < strlen; r++) {
+        for (int r = 1; r < strlen; r++) {//r也可以从0开始
             for (int l = 0; l < r; l++) {
                 if (s.charAt(l) == s.charAt(r) && (r - l <= 2 || dp[l + 1][r - 1])) {
                     dp[l][r] = true;
