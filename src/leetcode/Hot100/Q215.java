@@ -2,6 +2,8 @@ package leetcode.Hot100;
 
 import leetcode.Leetcode;
 
+import java.util.PriorityQueue;
+
 /**
  * @author lrd
  * @date 2023-01-28 8:35
@@ -43,5 +45,16 @@ public class Q215 {
         nums[i]=tmp;
         quickSort(nums,l,i-1);
         quickSort(nums,i+1,r);
+    }
+    @Leetcode("优先队列")
+    public int findKthLargest1(int[] nums, int k) {
+        PriorityQueue<Integer> heap = new PriorityQueue<>();
+        for (int num : nums) {
+            heap.add(num);
+            if (heap.size() > k) {
+                heap.poll();
+            }
+        }
+        return heap.peek();
     }
 }
