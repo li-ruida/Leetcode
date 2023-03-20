@@ -42,7 +42,7 @@ public class Q141 {
         }
     }
     @Leetcode("HashSet")
-    public boolean hasCycle(ListNode head) {
+    public boolean hasCycle1(ListNode head) {
         Set<ListNode> seen = new HashSet<ListNode>();
         while (head != null) {
             if (!seen.add(head)) {
@@ -52,4 +52,22 @@ public class Q141 {
         }
         return false;
     }
+    @Leetcode("双指针")
+    public boolean hasCycle(ListNode head) {
+        if (head == null || head.next == null) {
+            return false;
+        }
+        ListNode slow = head;
+        ListNode fast = head.next;
+        while (slow != fast) {
+            if (fast == null || fast.next == null) {
+                return false;
+            }
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return true;
+    }
+
+
 }
