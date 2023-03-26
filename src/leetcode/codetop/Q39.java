@@ -1,5 +1,7 @@
 package leetcode.codetop;
 
+import leetcode.Leetcode;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,7 +39,7 @@ public class Q39 {
         dfs(candidates, target, ans, combine, 0);
         return ans;
     }
-
+    @Leetcode("回溯 DFS")
     public void dfs(int[] candidates, int target, List<List<Integer>> ans, List<Integer> combine, int idx) {
         if (idx == candidates.length) {
             return;
@@ -46,9 +48,9 @@ public class Q39 {
             ans.add(new ArrayList<Integer>(combine));
             return;
         }
-        // 直接跳过
+        // 直接跳过 ,直接要下一个数
         dfs(candidates, target, ans, combine, idx + 1);
-        // 选择当前数
+        // 选择当前数 ,先要当前数
         if (target - candidates[idx] >= 0) {
             combine.add(candidates[idx]);
             dfs(candidates, target - candidates[idx], ans, combine, idx);
