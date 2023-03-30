@@ -1,5 +1,7 @@
 package leetcode.codetop;
 
+import leetcode.Leetcode;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -39,7 +41,7 @@ public class Q142 {
         }
     }
 
-    public ListNode detectCycle(ListNode head) {
+    public ListNode detectCycle1(ListNode head) {
         ListNode pos = head;
         Set<ListNode> visited = new HashSet<>();
         while (pos != null) {
@@ -51,5 +53,21 @@ public class Q142 {
             pos = pos.next;
         }
         return null;
+    }
+    @Leetcode("双指针")
+    public ListNode detectCycle(ListNode head) {
+        ListNode fast = head, slow = head;
+        while (true) {
+            if (fast == null || fast.next == null) return null;
+            fast = fast.next.next;
+            slow = slow.next;
+            if (fast == slow) break;
+        }
+        fast = head;
+        while (slow != fast) {
+            slow = slow.next;
+            fast = fast.next;
+        }
+        return fast;
     }
 }
