@@ -44,6 +44,9 @@ public class Q47 {
         }
         for (int i = 0; i < nums.length; ++i) {
             if (vis[i] || (i > 0 && nums[i] == nums[i - 1] && !vis[i - 1])) {
+                // 要填后面的节点就一定先填过前面的节点 什么意思？ 假设三个1 分别为 1a 1b 1c
+                // 要想填1b 就一定之前填过1a 要想填过1c 就一定填过1b 那么三个1都被填充的顺序就一定为1a 1b 1c
+                //同理可以把 !vis[i - 1]换成vis[i-1] 也能通过 此时意思就是要想填i 就必须没填过i-1 顺序就是1c 1b 1a
                 continue;
             }
             perm.add(nums[i]);
