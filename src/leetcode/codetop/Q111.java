@@ -32,7 +32,7 @@ public class Q111 {
               this.right = right;
           }
       }
-    @Leetcode("深度优先搜索")
+    @Leetcode("DFS")
     public int minDepth(TreeNode root) {
         if (root==null)
             return 0;
