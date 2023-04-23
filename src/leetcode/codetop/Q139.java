@@ -1,5 +1,7 @@
 package leetcode.codetop;
 
+import leetcode.Leetcode;
+
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -30,6 +32,7 @@ import java.util.Set;
  * wordDict 中的所有字符串 互不相同
  */
 public class Q139 {
+    @Leetcode("动态规划")
     public boolean wordBreak(String s, List<String> wordDict) {
         int len=s.length();
         boolean []dp=new boolean[len+1];
