@@ -1,5 +1,7 @@
 package leetcode.codetop;
 
+import leetcode.Leetcode;
+
 /**
  * @author lrd
  * @date 2023-05-19 7:48
@@ -19,6 +21,7 @@ package leetcode.codetop;
  * -105 <= mat[i][j] <= 105
  */
 public class Q498 {
+    @Leetcode("模拟")
     public int[] findDiagonalOrder(int[][] mat) {
         int m = mat.length;
         int n = mat[0].length;
