@@ -31,7 +31,7 @@ import java.util.TreeSet;
  * 保证在调用 ExamRoom.leave(p) 时有学生正坐在座位 p 上。
  */
 public class Q855 {
-    @Leetcode("优先队列")
+    @Leetcode("优先队列 有序集合TreeSet")
     class ExamRoom {
         PriorityQueue<int[]> q;
         TreeSet<Integer> set;
@@ -46,13 +46,21 @@ public class Q855 {
         }
 
         public int seat() {
-            if (set.size() == 0) { set.add(0); return 0;} //1.没有人时，一定返回0
+            if (set.size() == 0) {
+                set.add(0);
+                return 0;
+            } //1.没有人时，一定返回0
             int d1 = set.first(), d2 = n - 1 - set.last(); //获取最左和最右放置学生能获取的长度
             while (set.size() >= 2) { //2.大于等于两个人的时候，可以选择最左最右 或者中间的区间
                 int[] t = q.poll();
-                if (!set.contains(t[0]) || !set.contains(t[1]) || set.higher(t[0]) != t[1]) continue; //无效区间，某个端点已经被删除
+                if (!set.contains(t[0]) || !set.contains(t[1]) || set.higher(t[0]) != t[1])
+                    continue; //无效区间，某个端点已经被删除
                 int d3 = (t[1] - t[0]) / 2;
-                if (d3 <= d1 || d3 < d2) {q.add(new int[]{t[0], t[1]}); break;}; //选择最左或者最右
+                if (d3 <= d1 || d3 < d2) {
+                    q.add(new int[]{t[0], t[1]});
+                    break;
+                }
+                //选择最左或者最右
                 int mid = (t[0] + t[1]) / 2; //选择终点
                 q.add(new int[]{t[0], mid});
                 q.add(new int[]{mid, t[1]});
@@ -61,14 +69,19 @@ public class Q855 {
             }
             //3.选择最左或者最右的位置
             int l = 0, r = set.first(), sel = 0;
-            if (d1 < d2) {l = set.last(); r = n - 1; sel = n - 1;}
+            if (d1 < d2) {
+                l = set.last();
+                r = n - 1;
+                sel = n - 1;
+            }
             q.add(new int[]{l, r});
             set.add(sel);
             return sel;
         }
 
         public void leave(int p) {
-            if (p != set.first() && p != set.last()) q.add(new int[]{set.lower(p), set.higher(p)}); //如果不是删除两端点, 那么会增加新区间
+            if (p != set.first() && p != set.last())
+                q.add(new int[]{set.lower(p), set.higher(p)}); //如果不是删除两端点, 那么会增加新区间
             set.remove(p);
         }
     }
