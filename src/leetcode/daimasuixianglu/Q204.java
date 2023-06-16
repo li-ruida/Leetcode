@@ -1,5 +1,7 @@
 package leetcode.daimasuixianglu;
 
+import leetcode.Leetcode;
+
 /**
  * @author lrd
  * @date 2023-06-16 8:20
@@ -23,7 +25,7 @@ class ListNode {
     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
 }
 public class Q204 {
-
+    @Leetcode("迭代")
     public ListNode swapPairs(ListNode head) {
         ListNode node=head;
         if(node!=null&&node.next!=null)
@@ -36,4 +38,15 @@ public class Q204 {
         }
         return head;
     }
+    @Leetcode("递归")
+    public ListNode swapPairs1(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+        ListNode newHead = head.next;
+        head.next = swapPairs(newHead.next);
+        newHead.next = head;
+        return newHead;
+    }
+
 }
