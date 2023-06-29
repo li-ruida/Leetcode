@@ -26,7 +26,8 @@ public class Q28 {
     // KMP 算法
     // ss: 原串(string)  pp: 匹配串(pattern)
     public int strStr(String ss, String pp) {
-        if (pp.isEmpty()) return 0;
+        if (pp.isEmpty())
+            return 0;
 
         // 分别读取原串和匹配串的长度
         int n = ss.length(), m = pp.length();
