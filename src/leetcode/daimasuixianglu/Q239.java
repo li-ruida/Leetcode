@@ -38,8 +38,8 @@ public class Q239 {
         int n= nums.length;
         Deque<Integer> deque=new ArrayDeque<>();
         for (int i = 0; i < k; i++) {
-            if(!deque.isEmpty()&&nums[i]>=nums[deque.peekLast()]){
-                deque.clear();
+            while(!deque.isEmpty()&&nums[i]>=nums[deque.peekLast()]){
+                deque.pollLast();
             }
             deque.offer(i);
         }
@@ -47,7 +47,7 @@ public class Q239 {
         ans[0]=nums[deque.peekFirst()];
         for (int i = k; i < n; i++) {
             while (!deque.isEmpty()&&nums[i]>=nums[deque.peekLast()]){
-                deque.peekLast();
+                deque.pollLast();
             }
             deque.offer(i);
             while (deque.peekFirst()<=i-k){
