@@ -17,13 +17,6 @@ import leetcode.Leetcode;
  * 输入：head = [1]
  * 输出：[1]
  */
-class ListNode {
-    int val;
-    ListNode next;
-    ListNode() {}
-    ListNode(int val) { this.val = val; }
-    ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-}
 public class Q204 {
     @Leetcode("迭代")
     public ListNode swapPairs(ListNode head) {

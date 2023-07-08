@@ -1,7 +1,6 @@
 package leetcode.daimasuixianglu;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * @author lrd
@@ -34,5 +33,24 @@ public class Q145 {
         postorder(root.right, res);
         res.add(root.val);
     }
-
+    public List<Integer> postorderTraversal1(TreeNode root) {
+        List<Integer> result = new ArrayList<>();
+        if (root == null){
+            return result;
+        }
+        Deque<TreeNode> stack = new ArrayDeque<>();
+        stack.push(root);
+        while (!stack.isEmpty()){
+            TreeNode node = stack.pop();
+            result.add(node.val);
+            if (node.left != null){
+                stack.push(node.left);
+            }
+            if (node.right != null){
+                stack.push(node.right);
+            }
+        }
+        Collections.reverse(result);
+        return result;
+    }
 }

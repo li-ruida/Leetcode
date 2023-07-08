@@ -1,6 +1,8 @@
 package leetcode.daimasuixianglu;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Deque;
 import java.util.List;
 
 /**
@@ -52,5 +54,23 @@ public class Q144 {
         ans.add(root.val);
         preorder(root.left,ans);
         preorder(root.right,ans);
+    }
+    public List<Integer> preorderTraversal1(TreeNode root) {
+        List<Integer> ans=new ArrayList<>();
+        if (root==null){
+            return ans;
+        }
+        Deque<TreeNode> stack=new ArrayDeque<>();
+        TreeNode node=root;
+        while (!stack.isEmpty()||node!=null){
+            while (node!=null){
+                ans.add(node.val);
+                stack.push(node);
+                node=node.left;
+            }
+            node=stack.pop();
+            node=node.right;
+        }
+        return ans;
     }
 }
