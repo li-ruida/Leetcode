@@ -30,14 +30,11 @@ import java.util.List;
  */
 public class Q1005 {
     public int largestSumAfterKNegations(int[] nums, int k) {
-
         List<Integer> list = new ArrayList<>();
         for (int num : nums) {
             list.add(num);
         }
-
         list.sort((a, b) -> Math.abs(a) - Math.abs(b));
-
         int ans = 0;
         for (int i = list.size() - 1; i >= 0; i--) {
             if (k > 0 && list.get(i) < 0) {
@@ -47,11 +44,10 @@ public class Q1005 {
                 ans += list.get(i);
             }
         }
-
+        //奇数时候,减去堆顶
         if (k % 2 != 0) {
             ans -= 2 * Math.abs(list.get(0));
         }
-
         return ans;
     }
 
